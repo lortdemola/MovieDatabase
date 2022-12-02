@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './css/content.css';
+import IMG from './logo.svg'
 
 const MaiNBODY = (props) => {
 
@@ -11,10 +12,10 @@ const MaiNBODY = (props) => {
     setCommittedFieldsToAdd(9)
     setInputfieldsToAdd(parseInt(inputfieldsToAdd, 10))},[]
   );
-  
+
   const Field = ({ id }: { id: number }) => (
   <div class='back' >
-    <img src='./logob.svg' width="150vh" height="90%" className="d-inline-block align-top" alt="movie image" class='splash_img'/>
+    <img src={IMG} width="150vh" height="90%" className="d-inline-block align-top" alt="movie image" class='splash_img'/>
     <div class='comp' >
       <div class='textcomp1'>
         <label htmlFor={`field${id}`} class='sizeL'>name {id}</label>

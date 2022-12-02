@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import LOGO from '../components/res/logo.png'
 
 class NBAR extends Component {
    state = {
@@ -17,13 +18,12 @@ class NBAR extends Component {
     render() {
        return  <Navbar style={{background:'black',boxShadow: '1px 1px 2px black, 0 0 35px #FF7800, 0 0 10px #FF983D',minHeight:'5vh'}} expand="lg" >
        <Container fluid style={{background:'black'}}>
-         <Navbar.Brand href="#"><img style={{background:'#FF7800',color:'black'}}
-              src='./logob.svg'
-              width="150"
-              height="50"
-              
-              alt="Baza Filmowa"
-            /></Navbar.Brand>
+        <Navbar.Brand href="#"><img style={{color:'black'}}
+              src={LOGO}
+              width="120vh"
+              height="80vh"
+              alt="Baza Filmowa"/>
+        </Navbar.Brand>
          <Navbar.Toggle aria-controls="navbarScroll"  style={{background:'#FF7800'}}/>
          <Navbar.Collapse id="navbarScroll" >
            <Nav

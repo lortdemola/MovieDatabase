@@ -9,11 +9,8 @@ function App() {
     <div style={{ background: '#FFAB60'}}>
      <NBAR/>
      <MaiNBODY/>
-    
    </div>
-   
     <FBAR />
-   
   </div>
 
 
