@@ -1,0 +1,64 @@
+.back {
+    display: flex;
+    flex-direction: row;
+    background: black ;
+    box-shadow: 1px 1px 2px black, 0 0 15px #FF7800, 0 0 5px #FF983D;
+    margin: 10px;
+    margin-left: 15vh;
+    margin-top: 50px;
+    padding-right:10px;
+}
+.moviebody{
+    display:  flex ; 
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    padding-bottom: 50px ;
+    min-height: 100vh ;
+}
+.comp{
+    display:  flex ;
+    flex-direction: column ;
+    justify-content: top ;
+    margin-top: 10px ;
+}
+.textcomp1{
+    background:  black ;
+    width: 25vh ;
+    height: 50% ;
+    display:  flex ;
+    flex-direction: column ;
+    justify-content: space-evenly ,;
+    padding-left: 10px ;
+    color: white ;
+}
+.textcomp2{
+    background:  black ;
+    width: 12vw ;
+    height: 100px ;
+    display:  flex ;
+    flex-direction: column ;
+    justify-content: space-evenly ,;
+    padding-left: 10px ;
+    color: white ;
+}
+
+
+
+.splash_img {
+    background: #FF7800;
+    margin: 10px;
+    box-shadow: 0px 0px 2px black, 0 0 25px #FF7800, 0 0 10px #FF983D;  
+}
+.sizeS{
+ font-size: 1.5vh;
+}
+.sizeSp{
+    font-size: 1.5vh;
+    margin-left:1.5vh;
+}
+.sizeM{
+    font-size: 2.5vh; 
+}
+.sizeL{
+    font-size: 3vh; 
+}

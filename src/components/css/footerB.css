@@ -1,0 +1,11 @@
+.footlog{
+    display:  flex ;
+    background: black ;
+    height: 80px ;
+    justify-content: center ;
+    align-items: center ;
+    color: white ;
+    box-shadow:  1px 1px 2px black, 0 0 35px #FF7800, 0 0 10px #FF983D ;
+    min-height: 5vh ;
+    font-Size: 2.5vh;
+}
