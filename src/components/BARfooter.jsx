@@ -4,7 +4,7 @@ const FBAR  = (props) => {
    
     return (
         <footer class='footlog'> 
-          <span >©2022 Copyright: Kacper Dworak</span>
+          <span >©2023 Copyright: Kacper Dworak</span>
         </footer> 
       
     )

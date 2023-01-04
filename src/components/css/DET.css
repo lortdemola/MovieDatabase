@@ -1,0 +1,63 @@
+.backs{
+    display: flex;
+    background: black ;
+    box-shadow: 1px 1px 2px black, 0 0 15px #FF7800, 0 0 5px #FF983D;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:110vh;
+    width: 95%;
+    margin-left: 3%;
+    margin-right: 100%;
+    
+}
+.sizeSs{
+    color: aqua;
+    
+    font-size: 5.2vh;
+}
+.sizeSps{
+    color: aqua; 
+    margin-left:1.5vh;
+    font-size: 3.2vh;
+}
+.sizeLs{
+    color: aqua;
+    font-size: 14vh;
+}
+.sizeMs{
+    color: aqua; 
+    font-size: 4.2vh;
+}
+.textcomp1s{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.textcomp1_2s{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.textcomp2s{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.splash_imgs {
+    background: #FF7800;
+    margin: 10px;
+    box-shadow: 0px 0px 2px black, 0 0 25px #FF7800, 0 0 10px #FF983D;  
+}

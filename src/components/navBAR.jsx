@@ -18,7 +18,7 @@ class NBAR extends Component {
     render() {
        return  <Navbar style={{background:'black',boxShadow: '1px 1px 2px black, 0 0 35px #FF7800, 0 0 10px #FF983D',minHeight:'5vh'}} expand="lg" >
        <Container fluid style={{background:'black'}}>
-        <Navbar.Brand href="#"><img style={{color:'black'}}
+        <Navbar.Brand href="/"><img style={{color:'black'}}
               src={LOGO}
               width="120vh"
               height="80vh"
@@ -31,8 +31,8 @@ class NBAR extends Component {
              style={{ maxHeight: '100px' }}
              navbarScroll
            >
-             <Nav.Link href="#action1" style={{color:'#FF7800'}}>Home</Nav.Link>
-             <Nav.Link href="#action2" style={{color:'#FF7800'}}>Link</Nav.Link>
+             <Nav.Link href="/" style={{color:'#FF7800'}}>Home</Nav.Link>
+             <Nav.Link href="/add" style={{color:'#FF7800'}}>Add Movie</Nav.Link>
            </Nav>
            <Form className="d-flex"  >
              <Form.Control
@@ -46,10 +46,10 @@ class NBAR extends Component {
            </Form>
            
            <Nav class="d-flex align-items-center" style={{ marginLeft: '1vh'}}>
-                <Button type="button"  style={{ marginRight: '5px' ,marginTop: '5px' ,background:'#FF983C',border:'black'}}>
+                <Button type="button" href='/signin'  style={{ marginRight: '5px' ,marginTop: '5px' ,background:'#FF983C',border:'black'}}>
                 Login
                 </Button>
-                <Button type="button" style={{ marginTop: '5px',background:'#FF7800',border:'black'}} >
+                <Button type="button" href='/signup' style={{ marginTop: '5px',background:'#FF7800',border:'black'}} >
                 Sign up for free
                 </Button>
                 
