@@ -9,6 +9,7 @@ import Login from './components/page/LogIN';
 import Details from './components/page/details';
 import Home from './components/page/home';
 import Signin from './components/page/SignIN';
+
 function App() {
   return (
     //<div >

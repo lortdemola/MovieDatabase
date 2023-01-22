@@ -5,7 +5,7 @@ import FBAR from "../BARfooter";
 function Home() {
   return (
     <div >
-    <div style={{ background: '#FFAB60'}}>
+    <div style={{ background: '#FFAB60',height:'100%'}}>
      <NBAR/>
      <MaiNBODY/>
    </div>

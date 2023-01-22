@@ -1,33 +1,38 @@
 import React, {useState} from 'react';
-
+import axios from 'axios';
 import './css/DET.css';
 import IM2 from './logo.svg'
 
 
 
 const DETAILS  = (props) => {
-    const [ID, setID] = useState(0);
-    const getid = () =>{
-        setID(window.localStorage.getItem('nID'));
-    }
+    const [movie,setmovie] = useState([]);
+    
     React.useEffect(() => {
-       getid();
+       
+       someFunction();
        },[]
       );
+    
+
+    const someFunction = () => {
+      axios.get('https://at.usermd.net/api/movies/'+window.localStorage.getItem('nID'))
+      .then((res) => {
+        
+        setmovie(res.data)
+      })
+    };
+    
     return (
        <div class="backs">
-        <img src={IM2} width="50%" height="30%"  className="d-inline-block align-top" alt="movie image" class='splash_imgs'/>
+        <img src={movie.image} width="30%" height="50%"  className="d-inline-block align-top" alt="movie image" class='splash_imgs'/>
         <div  >
       <div class='textcomp1s'>
-        <label class='sizeLs' id="nameID">name {ID}</label>
+        <label class='sizeLs' id="nameID">{movie.title}</label>
         <div class='textcomp1_2'>
-          <label class='sizeSs'>angName {ID}</label>
-          <label class='sizeSps'>date {ID}</label>
+          <label class='sizeSs'>{movie.content}</label>
         </div>
-      </div>
-      <div class='textcomp2s'> 
-        <label  class='sizeMs'>rating {ID} </label> 
-        <label  class='sizeSps'>people count {ID}</label>
+        
       </div>
     </div>
        </div>

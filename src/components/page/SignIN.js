@@ -5,7 +5,7 @@ import SIGNUP from "../signin";
 function Signin() {
   return (
     <div >
-    <div style={{ background: '#FFAB60'}}>
+    <div style={{ background: '#FFAB60',height:'100vh'}}>
      <NBAR/>
      <SIGNUP />
    </div>

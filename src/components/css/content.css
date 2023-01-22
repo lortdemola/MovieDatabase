@@ -3,6 +3,7 @@
     flex-direction: row;
     background: black ;
     box-shadow: 1px 1px 2px black, 0 0 15px #FF7800, 0 0 5px #FF983D;
+    height: 35%;
     margin: 10px;
     margin-left: 15vh;
     margin-top: 50px;
@@ -12,8 +13,8 @@
     display:  flex ; 
     flex-direction: row ;
     flex-wrap: wrap ;
-    padding-bottom: 50px ;
-    min-height: 100vh ;
+    padding-bottom: 2vh ;
+    min-height: 10vh ;
 }
 .comp{
     display:  flex ;
@@ -24,23 +25,14 @@
 .textcomp1{
     background:  black ;
     width: 25vh ;
-    height: 50% ;
+    height: 20vh ;
     display:  flex ;
     flex-direction: column ;
     justify-content: space-evenly ,;
     padding-left: 10px ;
     color: white ;
 }
-.textcomp2{
-    background:  black ;
-    width: 12vw ;
-    height: 100px ;
-    display:  flex ;
-    flex-direction: column ;
-    justify-content: space-evenly ,;
-    padding-left: 10px ;
-    color: white ;
-}
+
 
 
 
@@ -50,6 +42,7 @@
     box-shadow: 0px 0px 2px black, 0 0 25px #FF7800, 0 0 10px #FF983D;  
 }
 .sizeS{
+    margin-top:1.5vh;
  font-size: 1.5vh;
 }
 .sizeSp{

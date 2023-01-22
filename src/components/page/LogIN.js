@@ -5,7 +5,7 @@ import LOGIN from "../Login";
 function Login() {
   return (
     <div >
-    <div style={{ background: '#FFAB60'}}>
+    <div style={{ background: '#FFAB60',height:'100vh'}}>
      <NBAR/>
      <LOGIN/>
    </div>

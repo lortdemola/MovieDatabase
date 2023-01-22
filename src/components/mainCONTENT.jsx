@@ -3,48 +3,71 @@ import React, {useState} from 'react';
 
 import './css/content.css';
 import IMG from './logo.svg'
-
+import axios from 'axios';
 
 
 const MaiNBODY = (props) => {
 
-  const [inputfieldsToAdd, setInputfieldsToAdd] = React.useState(1);
-  const [committedFieldsToAdd, setCommittedFieldsToAdd] = React.useState(0);
-  const [value, setValue] = useState(0);
+  
+  const [movies,setMovies] = useState([]);
+  const [idUS,setidUS] = useState('');
+  const [value, setValue] = useState(false);
   const [firts, setfirst] = useState(0);
 
   React.useEffect(() => {
-    setCommittedFieldsToAdd(20)
-    setInputfieldsToAdd(parseInt(inputfieldsToAdd, 10))
+    getmovies()
+    //window.localStorage.removeItem('userID');
+   
+    setValue(iflogin())
     if(firts == 0 ){
-      window.localStorage.clear();
       setfirst(1);
       
-    }},[]
+    }
+    
+      
+  },[]
   );
-  
-  
+  const iflogin = () =>{
+    const s =  window.localStorage.getItem('userID'); 
+    if(s!=null){
+      if(s != ''){
+        return true
+      }else{
+        return false
+      } 
+    }
+    else{
+      return false
+    }
+    
+    
+    
+  };
+  const getmovies = () => {
+    axios.get(`https://at.usermd.net/api/movies`)
+    .then((res) => {
+      console.log(res);
+      setMovies(res.data);
+    })
+  };
   const someFunction = (b) => {
+    
     window.localStorage.setItem('nID', b);
     window.location.href="/details";
   };
 
-  const Field = ({ id }: { id: number }) => (
+  const Field = ({ id,title,image,cont }: { id: number, title:string,image:string,cont:string }) => (
     <button id="pg" onClick={() =>someFunction(id)} class="back" >
   
-    <img src={IMG} width="150vh" height="90%" className="d-inline-block align-top" alt="movie image" class='splash_img'/>
+    <img src={image} width="150vh" height="250vh" className="d-inline-block align-top" alt="movie image" class='splash_img'/>
     <div class='comp' >
       <div class='textcomp1'>
-        <label htmlFor={`field${id}`} class='sizeL' id="nameID">name {id}</label>
+        <label htmlFor={`field${id}`} class='sizeL' id="nameID">{title}</label>
         <div>
-          <label htmlFor={`field${id}` } class='sizeS'>angName {id} </label>
-          <label htmlFor={`field${id}`} class='sizeSp'>  date {id}</label>
+          <label htmlFor={`field${id}` } class='sizeS'>{cont} </label>
         </div>
       </div>
-      <div class='textcomp2'> 
-        <label htmlFor={`field${id}`} class='sizeM'>rateing {id}</label>
-        <label htmlFor={`field${id}`} class='sizeS'>people count {id}</label>
-      </div>
+      
     </div>
   
   </button>
@@ -54,9 +77,9 @@ const MaiNBODY = (props) => {
     <div class='moviebody' >
       
       {/* {fields} */}
-      {[...Array(committedFieldsToAdd)].map(
+      {movies.map(
         (value: undefined, index: number) => (
-          <Field id={index + 1} key={index} />
+          <Field id={movies[index].id} title={movies[index].title} image={movies[index].image} cont={movies[index].content}  key={index} />
         )
       )}
       

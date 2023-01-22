@@ -6,7 +6,7 @@ import FBAR from "../BARfooter";
 function Add() {
   return (
     <div >
-    <div style={{ background: '#FFAB60'}}>
+    <div style={{ background: '#FFAB60',height:'100vh'}}>
      <NBAR/>
      <MADD/>
    </div>

@@ -4,7 +4,7 @@ import DETAILS from "../detail";
 function Details() {
   return (
     <div >
-    <div style={{ background: '#FFAB60'}}>
+    <div style={{ background: '#FFAB60',height:'100%'}}>
      <NBAR/>
      <DETAILS/>
    </div>
