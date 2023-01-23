@@ -1,7 +1,7 @@
 import './css/cont_SU.css';
 import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "./context/AuthProvider";
-
+import jwt_decode from "jwt-decode";
 import axios from './api/axios';
 const LOGIN_URL = '/auth';
 
@@ -39,6 +39,11 @@ const handleSubmit = async (e) => {
             console.log(" ");
             const s = response.data.token.toString();
             window.localStorage.setItem('userID', s);
+            
+            
+            const decoded = jwt_decode(s);
+            window.localStorage.setItem('role', decoded.role);
+            console.log(decoded.role);
             window.location.href="/";
           })
           .catch(function (error) {
