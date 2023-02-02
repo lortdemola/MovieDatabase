@@ -9,7 +9,6 @@ import { wait } from '@testing-library/user-event/dist/utils';
 
 const MaiNBODY = (props) => {
 
-  
   const [movies,setMovies] = useState([]);
   const [idUS,setidUS] = useState('');
   const [value, setValue] = useState(false);
@@ -18,16 +17,14 @@ const MaiNBODY = (props) => {
   React.useEffect(() => {
     getmovies()
     //window.localStorage.removeItem('userID');
-   
     setValue(iflogin())
     if(firts == 0 ){
       setfirst(1);
-      
     }
-    
-      
+
   },[]
   );
+
   const iflogin = () =>{
     const s =  window.localStorage.getItem('userID'); 
     if(s!=null){
@@ -40,10 +37,8 @@ const MaiNBODY = (props) => {
     else{
       return false
     }
-    
-    
-    
   };
+
   const getmovies = () => {
     axios.get(`https://at.usermd.net/api/movies`)
     .then((res) => {
@@ -51,14 +46,17 @@ const MaiNBODY = (props) => {
       setMovies(res.data);
     })
   };
+
   function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
   }
+
   const desctiption = (b) => {
     
     window.localStorage.setItem('nID', b);
     window.location.href="/details";
   };
+
   const del= async (b) => {
     axios.delete('https://at.usermd.net/api/movie/'+b)
     .then((res) => {
@@ -70,7 +68,6 @@ const MaiNBODY = (props) => {
 
     const Field = ({ id,title,image,cont }: { id: number, title:string,image:string,cont:string }) => (
     <button id="pg" onClick={() =>desctiption(id)} class="back" >
-  
     <img src={image} width="150vh" height="250vh" className="d-inline-block align-top" alt="movie image" class='splash_img'/>
     <div class='comp' >
       <div class='textcomp1'>
@@ -79,9 +76,7 @@ const MaiNBODY = (props) => {
           <label htmlFor={`field${id}` } class='sizeS'>{cont}</label>
         </div>
       </div>
-      
     </div>
-  
   </button>);
   
   if(window.localStorage.getItem('role') == 'admin'){
